@@ -47,13 +47,16 @@ echo -e "\033[32mWeb Resources are Ready.\033[0m"
 # Download Nginx Conf & Restart Nginx
 echo -e "\033[34mStart Configuring Nginx...\033[0m"
 url="https://raw.githubusercontent.com/CampusVideo/frontend/master/nginx.conf"
-wget -O nginx.conf.frontend $url
-sed -i "s/\[视频源地址\]/$livesource/g" nginx.conf.frontend
-cp -f nginx.conf.frontend /etc/nginx/
+wget -O /etc/nginx/nginx.conf.frontend $url
+sed -i "s/\[视频源地址\]/$livesource/g" /etc/nginx/nginx.conf.frontend
 mv -f /etc/nginx/nginx.conf.frontend /etc/nginx/nginx.conf
 systemctl restart nginx
 systemctl enable nginx
 echo -e "\033[32mNginx Configurations Finished.\033[0m"
+
+# Switch off Firewall
+systemctl stop firewalld
+systemctl disable firewalld
 
 # Finish Tips
 echo -e "\033[45;32mThe installation has finished. Now you can access the service by http://SERVER_ADDR/.\033[0m"

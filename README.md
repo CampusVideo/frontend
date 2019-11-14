@@ -118,7 +118,14 @@ systemctl enable nginx
 
 ### 7. 观看效果
 
-在安装配置完成后，通过访问 `http://您的服务器 IP 地址/` 应当即可访问频道列表与正常观看直播。
+在安装配置完成后，关闭系统防火墙：
+
+```bash
+systemctl stop firewalld
+systemctl disable firewalld
+```
+
+通过访问 `http://您的服务器 IP 地址/` 应当即可访问频道列表与正常观看直播。
 
 如果您需要在服务器配置防火墙以限制您的业务访问范围，可以参考我们的相关文档： [防火墙配置指南](https://github.com/CampusVideo/forwarder/blob/master/firewall.md) 。
 
