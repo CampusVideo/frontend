@@ -20,6 +20,11 @@
 curl https://raw.githubusercontent.com/CampusVideo/frontend/master/installer.sh | sh
 ```
 
+> 脚本交互中会要求您填入视频源地址，请使用以下格式之一：
+> * 域名：example.com
+> * IPv4 协议 IP 地址：192.0.2.1
+> * IPv6 协议 IP 地址：[2001:0db8:85a3:0000:0000:8a2e:0370:7334]
+
 在自动安装脚本执行完成后，您通过访问 `http://您的服务器 IP 地址/` 应当即可访问频道列表与正常观看直播。
 
 如果您需要在服务器配置防火墙以限制您的业务访问范围，可以参考我们的相关文档： [防火墙配置指南](https://github.com/CampusVideo/forwarder/blob/master/firewall.md) 。
@@ -98,8 +103,8 @@ git clone git@github.com:CampusVideo/frontend-src.git
 > * IPv6 协议 IP 地址：[2001:0db8:85a3:0000:0000:8a2e:0370:7334]
 
 ```bash
-wget https://raw.githubusercontent.com/CampusVideo/frontend/master/nginx.conf
-sed -i 's/\[视频源地址\]/上游源的 IP 或域名/g' nginx.conf
+wget -O nginx.conf.frontend https://raw.githubusercontent.com/CampusVideo/frontend/master/nginx.conf
+sed -i 's/\[视频源地址\]/上游源的 IP 或域名/g' nginx.conf.frontend
 cp -f nginx.conf.frontend /etc/nginx/
 mv -f /etc/nginx/nginx.conf.frontend /etc/nginx/nginx.conf
 ```
