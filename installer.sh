@@ -5,8 +5,7 @@ echo -e "\033[45;37mWelcome to the Service Node Installer\033[0m"
 # OS Reminder
 oscheck="Y"
 read -p "Are you sure the script is running on CentOS 7/8? [Y/n]: " oscheck
-if [ "$oscheck"x != "Y"x ];
-then
+if [ "$oscheck"x != "Y"x ];then
     echo -e "\033[47;31mSorry, but you can only run the installer on CentOS 7/8.\033[0m"
     exit 0
 fi
