@@ -90,15 +90,12 @@ git clone git@github.com:CampusVideo/frontend-src.git
 
 ### 6. 配置 Nginx 
 
-服务节点通过 Nginx 程序对用户提供 WEB 服务。我们提供的配置文件中已经包含获取电视源和提供 WEB 服务的完整配置，您下载配置文件后，替换其中的 `\[视频源地址\]` 为您上游视频源的 IP 地址或域名即可。
+服务节点通过 Nginx 程序对用户提供 WEB 服务。我们提供的配置文件中已经包含获取电视源和提供 WEB 服务的完整配置，您下载配置文件后，替换其中的 `[视频源地址]` 为您上游视频源的 IP 地址或域名即可。
 
-**上游源的 IP 地址或域名的填入格式如下：
-
-* 域名：example.com
-
-* IPv4 协议 IP 地址：192.0.2.1
-
-* IPv6 协议 IP 地址：[2001:0db8:85a3:0000:0000:8a2e:0370:7334] **
+> 上游源的 IP 地址或域名的填入格式如下：
+> * 域名：example.com
+> * IPv4 协议 IP 地址：192.0.2.1
+> * IPv6 协议 IP 地址：[2001:0db8:85a3:0000:0000:8a2e:0370:7334]
 
 ```bash
 wget https://raw.githubusercontent.com/CampusVideo/frontend/master/nginx.conf
