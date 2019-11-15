@@ -17,7 +17,7 @@
 您可在操作系统安装完成并且成功配置网络连接后通过以下方式使用：
 
 ```bash
-curl https://raw.githubusercontent.com/CampusVideo/frontend/master/installer.sh | sh
+sh -c "$(curl -sSL https://raw.githubusercontent.com/CampusVideo/frontend/master/installer.sh)"
 ```
 
 > 脚本交互中会要求您填入视频源地址，请使用以下格式之一：
