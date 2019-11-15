@@ -1,8 +1,15 @@
+# 视频分发
+
+![desc.png](https://raw.github.com/CampusVideo/forwarder/master/desc.png)
+
+本文档指导您进行面向最终用户提供服务的节点服务器的安装与配置工作。请选择就近的节点进行取源。
+
+如需自建分发节点配置文档见 [分发节点配置](https://github.com/CampusVideo/forwarder)
+
 # 服务节点配置指南
 
 常用链接：[联系我们](https://github.com/CampusVideo/forwarder/blob/master/contact.md) | [防火墙配置指南](https://github.com/CampusVideo/forwarder/blob/master/firewall.md)
 
-本文档指导您进行面向最终用户提供服务的节点服务器的安装与配置工作。
 
 ## 选取上游节点
 
