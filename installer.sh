@@ -40,7 +40,7 @@ echo -e "\033[32mNTP Configuration Finished.\033[0m"
 echo -e "\033[34mStart fetching web resources...\033[0m"
 mkdir /var/www
 cd /var/www
-git clone https://github.com/CampusVideo/frontend.git
+git clone https://github.com/CampusVideo/frontend-src.git
 echo -e "\033[32mWeb Resources are Ready.\033[0m"
 
 # Download Nginx Conf & Restart Nginx
