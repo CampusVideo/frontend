@@ -95,7 +95,7 @@ systemctl enable chronyd
 ```bash
 mkdir /var/www
 cd /var/www
-git clone https://github.com/CampusVideo/frontend.git
+git clone https://github.com/CampusVideo/frontend-src.git
 ```
 
 *当后续需要更新时（例如更新频道列表或更新样式），您可以进入 `/var/www/frontend-src/` 目录下，执行 `git pull` 命令。*
